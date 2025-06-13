@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flores Amarillas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top, #fff9c4, #fffde7);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #444;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3em;
+      color: #fbc02d;
+    }
+
+    .flower-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    .flower {
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle at center, #fdd835 20%, #fbc02d 60%, #f9a825 100%);
+      border-radius: 50%;
+      position: relative;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .flower::before,
+    .flower::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .flower::before {
+      transform: rotate(45deg);
+    }
+
+    .flower::after {
+      transform: rotate(-45deg);
+    }
+
+    .center {
+      width: 40px;
+      height: 40px;
+      background: #6d4c41;
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌻 Flores Amarillas 🌻</h1>
+
+  <div class="flower-container">
+    <div class="flower"><div class="center"></div></div>
+    <div class="flower"><div class="center"></div></div>
+    <div class="flower"><div class="center"></div></div>
+    <div class="flower"><div class="center"></div></div>
+    <div class="flower"><div class="center"></div></div>
+  </div>
+
+  <footer>
+    Hecho con 💛 para los amantes de las flores.
+  </footer>
+</body>
+</html>
+
